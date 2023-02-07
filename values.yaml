@@ -1,8 +1,8 @@
 replicaCount: 1
 
 deployment: 
-  name: "jee"
-  label: "jee"
+  name: "mydeploy"
+  label: "mydeploy"
 
 image:
   repository: kareemelkasaby/itimansbakehouse
@@ -17,7 +17,7 @@ service:
 resources: 
   containers:
     image: kareemelkasaby/itimansbakehouse:7
-    name:  jee
+    name:  mydeploy
     
 
 autoscaling:

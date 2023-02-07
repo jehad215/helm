@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata: 
-  name: jeservice
+  name: myservice
   labels:
-    app: jeservice
+    app: myservice
 spec:
   type: {{ .Values.service.type }}
   ports:
