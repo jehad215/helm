@@ -1,0 +1,28 @@
+replicaCount: 1
+
+deployment: 
+  name: "jee"
+  label: "jee"
+
+image:
+  repository: kareemelkasaby/itimansbakehouse
+  tag: "7"
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 80
+  port2: 6379
+
+resources: 
+  containers:
+    image: kareemelkasaby/itimansbakehouse:7
+    name:  jee
+    
+
+autoscaling:
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+ 

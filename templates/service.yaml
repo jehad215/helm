@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: jeservice
+  labels:
+    app: jeservice
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      protocol: TCP
+      nodePort: 30215
+  
+  selector:
+    app: {{ .Values.deployment.name }}
+status:
+  loadBalancer: {}
