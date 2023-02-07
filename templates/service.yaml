@@ -9,7 +9,7 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       protocol: TCP
-      nodePort: 30217
+      nodePort: 30215
   
   selector:
     app: {{ .Values.deployment.name }}
